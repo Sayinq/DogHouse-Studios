@@ -1,19 +1,17 @@
 import React from 'react'
 import NavbarComp from '../components/NavbarComp'
+import FooterSection from '../components/FooterSection';
+import HeroSection from '../components/HeroSection';
+import { Link } from '@nextui-org/react';
+
+
+import doghouseLogo from '../assets/logos/doghouse_studios_logo.png';
 
 const Home = () => {
     return (
         <main>
             <NavbarComp />
-            <section className="relative w-screen h-[575px] bg-green-500">
-                <div id="hero-game" className="absolute flex items-center justify-center bottom-0 left-0 w-full h-[250px] border-t-4 border-black bg-gradient-to-t from-neutral-900/70 to-zinc-900/10">
-                    <div id="game-content" className="flex flex-col justify-center items-center w-[300px] h-full gap-y-2 uppercase">
-                        <h2 className="text-lg w-full text-center text-white font-bold">The Hit Roguelike</h2>
-                        <h2 className="text-2xl w-full text-center text-[#DC143C] font-black mb-4">Rogue Mirage</h2>
-                        <button className="w-full h-[50px] bg-transparent hover:bg-white hover:text-black border-2 border-white text-white uppercase font-bold transition-all duration-100 ease-in-out">Available Now</button>
-                    </div>
-                </div>
-            </section>
+            <HeroSection />
             <section id="games-section" className="relative flex flex-col justify-start items-center w-screen h-[300px] bg-indigo-600">
                 <h2 className="text-white text-4xl font-black">GAMES</h2>
                 {/* Slider component that shows off the games */}
@@ -21,9 +19,9 @@ const Home = () => {
             <section id="about-section" className="relative flex flex-col justify-start items-center w-screen h-[600px] bg-black text-white">
                 <div id="about-wrapper" className="flex justify-center items-start w-full h-full">
                     <div id="about-content" className="flex flex-col max-w-[65%] text-center py-24 gap-y-8">
-                        <h2 className="text-4xl font-black">DogHouse Games</h2>
+                        <h2 className="text-4xl font-black">DogHouse Studios</h2>
                         <p className="text-xl text-">
-                            This is text referring to all of the great things about DogHouse Games, 
+                            This is text referring to all of the great things about DogHouse Studios, 
                             where we're stationed, and what we have to offer.
                         </p>
                         <button className="w-full h-[50px] bg-transparent hover:bg-white hover:text-black border-2 border-white text-white uppercase font-bold transition-all duration-100 ease-in-out">Our Team</button>
@@ -33,7 +31,7 @@ const Home = () => {
             <section id="news-section" className="relative flex flex-col items-center w-screen h-auto p-8">
                 <div id="news-header" className="flex flex-col w-full h-auto justify-center items-center uppercase text-white gap-y-8">
                     <h2 className="text-4xl font-black">Latest news</h2>
-                    <button className="w-[200px] h-[50px] bg-transparent hover:bg-white hover:text-black border-2 border-white text-white uppercase font-bold transition-all duration-100 ease-in-out">Our Team</button>
+                    <button className="w-[200px] h-[50px] bg-transparent hover:bg-white hover:text-black border-2 border-white text-white uppercase font-bold transition-all duration-100 ease-in-out">See more</button>
                 </div>
                 {/* Component where we can just plug in a list.map */}
                 <div id="news-articles" className="">
@@ -59,18 +57,7 @@ const Home = () => {
                     {/* Input label design for newsletter mockup */}
                 </div>
             </section>
-            <footer id="footer-section" className="flex flex-col w-screen h-auto justify-center items-center p-8 gap-y-4 text-white">
-                <div id="footer-logo" className="w-[250px] h-[100px] bg-indigo-600" />
-                <div id="footer-links" className="flex flex-col">
-                    <h2 className="text-lg font-black uppercase">Connect with us</h2>
-                    <div id="links" className="">
-                        {/* Logos for social media */}
-                    </div>
-                </div>
-                <div id="footer-newsletter" className="">
-                    {/* Input label design for newsletter mockup */}
-                </div>
-            </footer>
+            <FooterSection />
         </main>
     )
 }
